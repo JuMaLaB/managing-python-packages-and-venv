@@ -24,12 +24,19 @@ PS C:\ws_vedana\[python]\managing-python-packages-and-venv>py -m pip help list
 PS C:\ws_vedana\[python]\managing-python-packages-and-venv> pip list
 PS C:\ws_vedana\[python]\managing-python-packages-and-venv> pip show pip
 
-# in a real command prompt
+# in a real command prompt / real life
 C:\ws_vedana\[python]\managing-python-packages-and-venv
-λ ..\virtualenvs\mppav\Scripts\activate.bat
+λ py -m venv venv
 
 C:\ws_vedana\[python]\managing-python-packages-and-venv
-(mppav) λ pip show babel
+# λ ..\virtualenvs\mppav\Scripts\activate.bat
+λ .\venv\Scripts\activate.bat
+
+C:\ws_vedana\[python]\managing-python-packages-and-venv
+(venv) λ py -m pip install babel
+
+C:\ws_vedana\[python]\managing-python-packages-and-venv
+(venv) λ pip show babel
 Name: babel
 Version: 2.16.0
 Summary: Internationalization utilities
@@ -42,10 +49,10 @@ Requires:
 Required-by:
 
 C:\ws_vedana\[python]\managing-python-packages-and-venv
-(mppav) λ py -m pip freeze > requirements.txt
+(venv) λ py -m pip freeze > requirements.txt
 
 C:\ws_vedana\[python]\managing-python-packages-and-venv
-(mppav) λ py -m pip install -r requirements.txt
+(venv) λ py -m pip install -r requirements.txt
 """
 
 from babel.numbers import format_number, format_decimal
